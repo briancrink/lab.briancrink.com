@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side-by-Side Comparison — Feature Styles</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 80px 24px 120px;
+    }
+    .container { max-width: 980px; margin: 0 auto; }
+    h1 { font-size: 40px; font-weight: 600; text-align: center; margin-bottom: 64px; letter-spacing: -0.5px; }
+    .back { color: #0071e3; text-decoration: none; font-size: 15px; display: inline-block; margin-bottom: 40px; }
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+    .col { text-align: center; }
+    .col h2 { font-size: 24px; font-weight: 600; margin-bottom: 48px; }
+    .feature { margin-bottom: 56px; }
+    .feature svg {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 14px;
+    }
+    .feature h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+    .feature p { font-size: 14px; color: var(--muted); }
+    .feature .dash { color: #c7c7cc; font-size: 18px; margin-top: 8px; }
+    @media (max-width: 700px) {
+      .compare { grid-template-columns: 1fr; gap: 64px; }
+    }
+    @media (max-width: 700px) {
+      .compare { grid-template-columns: 1fr; gap: 64px; }
+    }
+    .examples {
+      margin-top: 80px; padding-top: 48px; border-top: 1px solid #e5e5e7;
+    }
+    .examples h2 { font-size: 28px; font-weight: 600; margin-bottom: 8px; text-align: left; }
+    .examples .sub { color: var(--muted); margin-bottom: 32px; font-size: 16px; text-align: left; }
+    .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .example-card {
+      background: #fafafa; border: 1px solid #e5e5e7; border-radius: 16px; padding: 20px;
+      text-decoration: none; color: inherit; display: flex; flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .example-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .example-card .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .example-card .logo {
+      width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 14px; color: #fff;
+    }
+    .example-card h3 { font-size: 16px; font-weight: 600; }
+    .example-card p { color: var(--muted); font-size: 14px; line-height: 1.4; flex-grow: 1; }
+    .example-card .link { margin-top: 16px; color: #0071e3; font-size: 14px; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">← All styles</a>
+    <h1>Which plan is right for you?</h1>
+
+    <div class="compare">
+      <div class="col">
+        <h2>Standard</h2>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M24 8v32M8 24h32"/>
+            <circle cx="24" cy="24" r="16"/>
+          </svg>
+          <h3>Instant sync</h3>
+          <p>Changes appear on all devices in under a second</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="22" cy="22" r="8"/>
+            <path d="M28 28l8 8"/>
+          </svg>
+          <h3>Smart search</h3>
+          <p>Natural language queries across your workspace</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="18" cy="20" r="4"/>
+            <circle cx="30" cy="20" r="4"/>
+            <path d="M12 32c0-4 3-6 6-6s6 2 6 6"/>
+          </svg>
+          <h3>Team workspaces</h3>
+          <p>Up to 10 members with basic permissions</p>
+        </div>
+      </div>
+      <div class="col">
+        <h2>Pro</h2>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M24 8v32M8 24h32"/>
+            <circle cx="24" cy="24" r="16"/>
+          </svg>
+          <h3>Instant sync</h3>
+          <p>Real-time sync with conflict resolution and offline support</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="22" cy="22" r="8"/>
+            <path d="M28 28l8 8"/>
+          </svg>
+          <h3>Smart search</h3>
+          <p>Advanced filters, saved views, and AI-powered suggestions</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="18" cy="20" r="4"/>
+            <circle cx="30" cy="20" r="4"/>
+            <path d="M12 32c0-4 3-6 6-6s6 2 6 6M24 32c0-4 3-6 6-6s6 2 6 6"/>
+          </svg>
+          <h3>Team workspaces</h3>
+          <p>Unlimited members, roles, SSO, and audit logs</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="examples">
+      <h2>Examples</h2>
+      <p class="sub">Sites that use side-by-side model or tier comparisons with icons.</p>
+      <div class="examples-grid">
+        <a class="example-card" style="background:#f5f5f7" href="https://www.apple.com/iphone/compare/" target="_blank" rel="noopener">
+          <div class="brand">
+            <div class="logo" style="background:#000"></div>
+            <h3>Apple iPhone Compare</h3>
+          </div>
+          <p>Classic two-column (or multi) comparison with matching icons and specs for each model.</p>
+          <span class="link">View example →</span>
+        </a>
+        <a class="example-card" style="background:#e8f2ff" href="https://www.apple.com/mac/compare/" target="_blank" rel="noopener">
+          <div class="brand">
+            <div class="logo" style="background:#0071e3"></div>
+            <h3>Apple Mac Compare</h3>
+          </div>
+          <p>Similar icon-led side-by-side layout for Mac models.</p>
+          <span class="link">View example →</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

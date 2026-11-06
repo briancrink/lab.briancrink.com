@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Grid — Feature Styles</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --border: #d2d2d7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 80px 24px 120px;
+    }
+    .container { max-width: 980px; margin: 0 auto; }
+    h1 { font-size: 48px; font-weight: 600; text-align: center; letter-spacing: -0.8px; margin-bottom: 12px; }
+    .lead { text-align: center; color: var(--muted); font-size: 21px; margin-bottom: 80px; max-width: 680px; margin-left: auto; margin-right: auto; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 64px 40px;
+    }
+    .feature { text-align: center; }
+    .feature svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .feature h3 { font-size: 19px; font-weight: 600; margin-bottom: 6px; }
+    .feature p { font-size: 15px; color: var(--muted); line-height: 1.4; }
+    .back {
+      display: inline-block;
+      margin-bottom: 48px;
+      color: #0071e3;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr 1fr; gap: 48px 24px; }
+      h1 { font-size: 36px; }
+    }
+    @media (max-width: 520px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    footer { margin-top: 64px; text-align: center; color: var(--muted); font-size: 13px; }
+    .examples {
+      margin-top: 100px;
+      padding-top: 48px;
+      border-top: 1px solid #e5e5e7;
+    }
+    .examples h2 { font-size: 28px; font-weight: 600; margin-bottom: 8px; text-align: left; }
+    .examples .sub { color: var(--muted); margin-bottom: 32px; font-size: 16px; text-align: left; }
+    .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .example-card {
+      background: #fafafa;
+      border: 1px solid #e5e5e7;
+      border-radius: 16px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .example-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .example-card .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .example-card .logo {
+      width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 14px; color: #fff;
+    }
+    .example-card h3 { font-size: 16px; font-weight: 600; }
+    .example-card p { color: var(--muted); font-size: 14px; line-height: 1.4; flex-grow: 1; }
+    .example-card .link { margin-top: 16px; color: #0071e3; font-size: 14px; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../">← All styles</a>
+    <h1>Built for modern teams.</h1>
+    <p class="lead">A clean icon grid. Icon above, short title, supporting line. Generous space between items.</p>
+
+    <div class="grid">
+      <div class="feature">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M24 8v32M8 24h32"/>
+          <circle cx="24" cy="24" r="16"/>
+        </svg>
+        <h3>Instant sync</h3>
+        <p>Changes appear everywhere in real time. No manual refresh needed.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="22" cy="22" r="8"/>
+          <path d="M28 28l8 8"/>
+        </svg>
+        <h3>Smart search</h3>
+        <p>Natural language queries that understand context across your workspace.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="18" cy="20" r="4"/>
+          <circle cx="30" cy="20" r="4"/>
+          <path d="M12 32c0-4 3-6 6-6s6 2 6 6M24 32c0-4 3-6 6-6s6 2 6 6"/>
+        </svg>
+        <h3>Team workspaces</h3>
+        <p>Shared spaces with role-based access and activity history.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 36V18l12-8 12 8v18"/>
+          <path d="M20 36v-8h8v8"/>
+        </svg>
+        <h3>Usage insights</h3>
+        <p>Privacy-first analytics that show what matters without tracking individuals.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M24 8l6 12 14 2-10 10 2 14-12-6-12 6 2-14-10-10 14-2z"/>
+        </svg>
+        <h3>Enterprise security</h3>
+        <p>SSO, SCIM provisioning, audit logs, and custom data retention.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="10" y="14" width="28" height="20" rx="3"/>
+          <path d="M16 22h16M16 28h10"/>
+        </svg>
+        <h3>Custom branding</h3>
+        <p>White-label options including custom domains, logos, and color themes.</p>
+      </div>
+    </div>
+
+    <section class="examples">
+      <h2>Examples</h2>
+      <p class="sub">Sites that showcase clean icon grids with text below.</p>
+      <div class="examples-grid">
+        <a class="example-card" style="background:#f5f5f7" href="https://www.apple.com/iphone/compare/" target="_blank" rel="noopener">
+          <div class="brand">
+            <div class="logo" style="background:#000"></div>
+            <h3>Apple</h3>
+          </div>
+          <p>iPhone comparison page uses icon-led rows for battery, chip, camera, and other specs with generous spacing.</p>
+          <span class="link">View example →</span>
+        </a>
+        <a class="example-card" style="background:#e8f2ff" href="https://www.apple.com/iphone/" target="_blank" rel="noopener">
+          <div class="brand">
+            <div class="logo" style="background:#0071e3"></div>
+            <h3>Apple iPhone</h3>
+          </div>
+          <p>Product pages often use simple icon + short text grids for key capabilities.</p>
+          <span class="link">View example →</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
